@@ -1,10 +1,4 @@
 return {
-  -- LSP
-  {
-    "neovim/nvim-lspconfig",
-    dependencies = { "williamboman/mason.nvim", "williamboman/mason-lspconfig.nvim" },
-  },
-
   -- Auto install tools
   {
     "williamboman/mason.nvim",

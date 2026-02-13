@@ -1,7 +1,9 @@
 return {
-  "neovim/nvim-lspconfig", -- still needed for now
+  "neovim/nvim-lspconfig",
+  dependencies = { "williamboman/mason.nvim", "williamboman/mason-lspconfig.nvim" },
   config = function()
-    vim.lsp.config("gopls", {
+    local lspconfig = require("lspconfig")
+    lspconfig.gopls.setup({
       settings = {
         gopls = {
           gofumpt = true,
@@ -12,8 +14,6 @@ return {
         },
       },
     })
-
-    vim.lsp.enable("gopls")
   end,
 }
 
